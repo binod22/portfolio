@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
-  const projects = [
+  const [showAll, setShowAll] = useState(false);
+
+  const allProjects = [
     {
       title: 'Smart Traffic Monitoring System',
       description:
@@ -23,7 +25,7 @@ const Projects = () => {
         'EasyOCR'
       ],
       image: '/src/assets/images/projects/traffic-monitoring.jpg',
-      githubLink: '#',
+      githubLink: 'https://github.com/binod22/Final-Year-Project.git',
       demoLink: '#'
     },
     {
@@ -50,29 +52,36 @@ const Projects = () => {
     }
   ];
 
+  const displayedProjects = showAll ? allProjects : allProjects.slice(0, 2);
+
   return (
     <section id="projects" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Projects</h2>
-        <div className="grid gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-tertiary rounded-lg overflow-hidden shadow-xl"
-            >
-              <div className="grid md:grid-cols-2 gap-8 p-6">
-                <div className="order-2 md:order-none">
-                  <h3 className="text-2xl font-bold mb-4 text-secondary">
-                    {project.title}
-                  </h3>
-                  <p className="text-textSecondary mb-4">
-                    {project.description}
-                  </p>
-                  {project.longDescription && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="section-title mb-12">My Work</h2>
+          <div className="grid gap-8">
+            {displayedProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-tertiary rounded-lg overflow-hidden shadow-xl"
+              >
+                <div className="grid md:grid-cols-2 gap-8 p-6">
+                  <div className="order-2 md:order-none">
+                    <h3 className="text-2xl font-bold mb-4 text-secondary">
+                      {project.title}
+                    </h3>
+                    <p className="text-textSecondary mb-4">
+                      {project.description}
+                    </p>
                     <ul className="space-y-2 mb-6 text-textSecondary">
                       {project.longDescription.map((point, i) => (
                         <li key={i} className="flex items-start">
@@ -81,54 +90,66 @@ const Projects = () => {
                         </li>
                       ))}
                     </ul>
-                  )}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-primary rounded-full text-secondary text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-primary rounded-full text-secondary text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex gap-4">
+                      {project.demoLink && (
+                        <a
+                          href={project.demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary"
+                        >
+                          GitHub
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex gap-4">
-                    {project.demoLink && (
-                      <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-                    {project.githubLink && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary"
-                      >
-                        GitHub
-                      </a>
-                    )}
+                  <div className="relative group">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
                   </div>
                 </div>
-                <div className="relative group">
-                  <div className="overflow-hidden rounded-lg">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors duration-300"></div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+          {allProjects.length > 2 && (
+            <div className="mt-12 text-center">
+              <motion.button
+                onClick={() => setShowAll(!showAll)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary"
+              >
+                {showAll ? 'Show Less' : 'Show More'}
+              </motion.button>
+            </div>
+          )}
+        </motion.div>
       </div>
     </section>
   );
