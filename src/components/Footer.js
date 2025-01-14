@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-textSecondary text-sm">
-            {currentYear} Binod Regmi. All rights reserved.
+            &copy; {currentYear} Binod Regmi. All rights reserved.
           </p>
         </div>
       </div>
