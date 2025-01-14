@@ -4,20 +4,35 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skills = [
     {
-      category: 'Frontend',
-      items: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+      category: "Programming Languages",
+      items: [
+        "Python",
+        "JavaScript",
+        "Typescript",
+        "Java",
+        "HTML5",
+        "CSS3",
+        "C/C++",
+      ],
     },
     {
-      category: 'Backend',
-      items: ['Node.js', 'Express', 'Python', 'Django', 'RESTful APIs'],
+      category: "Frontend Framework",
+      items: [
+        "React",
+        "Tailwind CSS",
+      ],
     },
     {
-      category: 'Tools & Platforms',
-      items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Docker'],
+      category: "Backend",
+      items: ["Node.js", "Express", "Python", "Django", "RESTful APIs"],
     },
     {
-      category: 'Other',
-      items: ['Responsive Design', 'UI/UX Design','Agile/Scrum'],
+      category: "Tools & Platforms",
+      items: ["Git", "GitHub", "VS Code", "Postman"],
+    },
+    {
+      category: "Other",
+      items: ["Responsive Design", "UI/UX Design", "Agile/Scrum"],
     },
   ];
 

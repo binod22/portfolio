@@ -6,11 +6,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
+    { name: "Experience", to: "experience" },
   ];
 
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="home" className="text-2xl font-bold text-secondary cursor-pointer">
-            Portfolio
+            Binod's Portfolio
           </Link>
 
           {/* Desktop Menu */}

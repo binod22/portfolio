@@ -8,11 +8,10 @@ const Experience = () => {
       company: "Treeleaf Technologies, Chakupat Lalitpur",
       period: "2024-Dec-13 to Present",
       description: [
-        "Led development of key features resulting in 30% improvement in user engagement",
         "Collaborated with cross-functional teams to deliver high-quality solutions",
         "Implemented responsive design principles and optimized performance"
       ],
-      technologies: ["Django", "JavaScript","HTML","CSS", "MongoDB"]
+      technologies: ["Django", "JavaScript","HTML","CSS", "PostgreSQL"]
     }
   ];
 

@@ -24,7 +24,7 @@ const Projects = () => {
         'Deep Learning',
         'EasyOCR'
       ],
-      image: '/src/assets/images/projects/traffic-monitoring.jpg',
+      // image: '/src/assets/images/projects/traffic-monitoring.jpg',
       githubLink: 'https://github.com/binod22/Final-Year-Project.git',
       demoLink: '#'
     },
@@ -46,7 +46,7 @@ const Projects = () => {
         'REST API',
         'Responsive Design'
       ],
-      image: '/src/assets/images/projects/where-in-world.jpg',
+      //image: '/src/assets/images/projects/where-in-world.jpg',
       githubLink: 'https://github.com/binod22/Where_in_the_World',
       demoLink: 'https://all-countries-information-bybinod.netlify.app'
     }
