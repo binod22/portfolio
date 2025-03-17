@@ -29,11 +29,9 @@ const About = () => {
                 Here are a few technologies I've been working with recently:
               </p>
               <ul className="grid grid-cols-2 gap-2 list-disc list-inside mb-4">
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
+                <li>Kubernetes</li>
+                <li>Docker</li>
+                <li>Advance shell scripting</li>
                 <li>Python</li>
               </ul>
             </div>

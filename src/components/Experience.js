@@ -6,12 +6,12 @@ const Experience = () => {
     {
       title: "Django Intern",
       company: "Treeleaf Technologies, Chakupat Lalitpur",
-      period: "2024-Dec-13 to Present",
+      period: "2024-Dec-13 to 2025-Mar-14",
       description: [
         "Collaborated with cross-functional teams to deliver high-quality solutions",
         "Implemented responsive design principles and optimized performance"
       ],
-      technologies: ["Django", "JavaScript","HTML","CSS", "PostgreSQL"]
+      technologies: ["Django", "JavaScript","HTML","CSS","PostgreSQL"]
     }
   ];
 

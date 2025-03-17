@@ -24,11 +24,16 @@ const Skills = () => {
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "Python", "Django", "RESTful APIs"],
+      items: ["Python", "Django", "RESTful APIs"],
     },
     {
       category: "Tools & Platforms",
       items: ["Git", "GitHub", "VS Code", "Postman"],
+    },
+    { 
+      category:"DevOps",
+      items:["Docker","Kubernetes"]
+
     },
     {
       category: "Other",
