@@ -24,8 +24,8 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-secondary">Experience</h2>
-          
+          <h2 className="section-title">Experience</h2>
+
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
@@ -38,18 +38,24 @@ const Experience = () => {
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-secondary">{exp.title}</h3>
+                    <h3 className="text-xl font-bold text-secondary">
+                      {exp.title}
+                    </h3>
                     <p className="text-accent">{exp.company}</p>
                   </div>
-                  <p className="text-sm text-gray-500 mt-2 md:mt-0">{exp.period}</p>
+                  <p className="text-sm text-gray-500 mt-2 md:mt-0">
+                    {exp.period}
+                  </p>
                 </div>
-                
+
                 <ul className="list-disc list-inside mb-4 space-y-2">
                   {exp.description.map((item, i) => (
-                    <li key={i} className="text-gray-700">{item}</li>
+                    <li key={i} className="text-gray-700">
+                      {item}
+                    </li>
                   ))}
                 </ul>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, i) => (
                     <span

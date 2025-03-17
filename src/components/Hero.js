@@ -30,7 +30,7 @@ const Hero = () => {
           </motion.h2>
           <h1 className="text-4xl sm:text-6xl font-bold mb-4">
             <TypeWriter 
-              text="Binod Regmi"
+              text="Binod Regmi 👋"
               speed={150}
               className="bg-gradient-to-r from-secondary to-textPrimary bg-clip-text text-transparent"
             />
